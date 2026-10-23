@@ -1,0 +1,10 @@
+# ComfyUI-Vextra-Nodes deps (dc740 fork)
+opencv-python
+Pillow
+numpy
+torch
+torchvision
+transformers
+pilgram
+glitch-this
+git+https://github.com/dc740/pixelsort.git   # Pillow>=10 PyAccess fix
