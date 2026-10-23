@@ -7,7 +7,7 @@ try:
     import pixelsort
 except ModuleNotFoundError:
     # install pixelsort in current venv
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "pixelsort"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "git+https://github.com/dc740/pixelsort.git"])
     import pixelsort
 
 
