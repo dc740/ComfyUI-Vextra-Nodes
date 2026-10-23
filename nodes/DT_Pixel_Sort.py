@@ -2,12 +2,11 @@ import torch
 import numpy as np
 from PIL import Image
 import sys
-import subprocess
 try:
     import pixelsort
 except ModuleNotFoundError:
     # install pixelsort in current venv
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "git+https://github.com/dc740/pixelsort.git"])
+    raise ModuleNotFoundError("pixelsort missing - install the Pillow>=10 fork: pip install git+https://github.com/dc740/pixelsort.git")
     import pixelsort
 
 

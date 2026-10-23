@@ -1,13 +1,12 @@
 import torch
 import numpy as np
 from PIL import Image
-import subprocess
 import sys
 try:
     from glitch_this import ImageGlitcher
 except ModuleNotFoundError:
     # install pixelsort in current venv
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "glitch-this"])
+    raise ModuleNotFoundError("glitch-this missing - install manually: pip install glitch-this")
     from glitch_this import ImageGlitcher
 
 class GlitchThis():

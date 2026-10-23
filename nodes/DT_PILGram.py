@@ -1,13 +1,12 @@
 import torch
 import numpy as np
 from PIL import Image
-import subprocess
 import sys
 try:
     import pilgram
 except ModuleNotFoundError:
     # install pixelsort in current venv
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "pilgram"])
+    raise ModuleNotFoundError("pilgram missing - install manually: pip install pilgram")
     import pilgram
 
 class ApplyFilter():
